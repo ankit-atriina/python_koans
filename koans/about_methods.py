@@ -126,7 +126,7 @@ class AboutMethods(Koan):
         return "ok"
 
     def test_the_documentation_can_be_viewed_with_the_doc_method(self):
-        self.assertRegex(self.method_with_documentation.__doc__, __)
+        self.assertRegex(self.method_with_documentation.__doc__, 'A')
 
     # ------------------------------------------------------------------
 
@@ -143,13 +143,13 @@ class AboutMethods(Koan):
 
     def test_calling_methods_in_other_objects(self):
         rover = self.Dog()
-        self.assertEqual(__, rover.name())
+        self.assertEqual('Fido', rover.name())
 
     def test_private_access_is_implied_but_not_enforced(self):
         rover = self.Dog()
 
         # This is a little rude, but legal
-        self.assertEqual(__, rover._tail())
+        self.assertEqual('wagging', rover._tail())
 
     def test_attributes_with_double_underscore_prefixes_are_subject_to_name_mangling(self):
         rover = self.Dog()
