@@ -95,7 +95,7 @@ class AboutMethods(Koan):
         self.assertEqual(42, self.another_method_with_the_same_name())
 
     def test_that_overlapped_method_is_still_there(self):
-        self.assertEqual(__, self.link_to_overlapped_method())
+        self.assertEqual(10, self.link_to_overlapped_method())
 
     # ------------------------------------------------------------------
 
@@ -103,21 +103,21 @@ class AboutMethods(Koan):
         pass
 
     def test_methods_that_do_nothing_need_to_use_pass_as_a_filler(self):
-        self.assertEqual(__, self.empty_method())
+        self.assertEqual(None, self.empty_method())
 
     def test_pass_does_nothing_at_all(self):
         "You"
         "shall"
         "not"
         pass
-        self.assertEqual(____, "Still got to this line" != None)
+        self.assertEqual(True, "Still got to this line" != None)
 
     # ------------------------------------------------------------------
 
     def one_line_method(self): return 'Madagascar'
 
     def test_no_indentation_required_for_one_line_statement_bodies(self):
-        self.assertEqual(__, self.one_line_method())
+        self.assertEqual('Madagascar', self.one_line_method())
 
     # ------------------------------------------------------------------
 
