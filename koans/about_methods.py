@@ -62,7 +62,7 @@ class AboutMethods(Koan):
     def test_calling_with_variable_arguments(self):
         self.assertEqual((), self.method_with_var_args())
         self.assertEqual(('one',), self.method_with_var_args('one'))
-        self.assertEqual(__, self.method_with_var_args('one', 'two'))
+        self.assertEqual(('one', 'two'), self.method_with_var_args('one', 'two'))
 
     # ------------------------------------------------------------------
 
